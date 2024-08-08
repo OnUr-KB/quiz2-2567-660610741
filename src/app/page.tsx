@@ -17,7 +17,12 @@ export default function Home() {
         style={{ maxWidth: "700px" }}
         className="mx-auto p-3 rounded rounded-3 shadow-sm bg-white"
       >
-        {/* Post Owner Example*/}
+        <PostOwnner
+        ImagePath = "profileImages/me.jpg"
+        username ="Kanyawee Srithankaew 660610741"
+        postTitle = "Quiz ง่ายจังเลยครับ ขอยาก ๆ กว่านี้ได้ไหม #261207"
+        likes = {100} />
+        {/* Post Owner Example
         <div className="vstack gap-3">
           <div className="d-flex align-items-center gap-3">
             <img
@@ -37,7 +42,7 @@ export default function Home() {
             <span className="text-muted">100 คน</span>
           </div>
           <hr className="m-0 border" />
-        </div>
+        </div> */}
 
         {/* Comment Example */}
         <div className="d-flex gap-2 my-2">
