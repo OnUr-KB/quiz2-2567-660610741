@@ -1,5 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
+import PostOwnner from "@/components/PostOwnner";
+import Comment from "@/components/Comment";
+import Reply from "@/components/Reply";
 
 export default function Home() {
   return (
@@ -16,13 +21,13 @@ export default function Home() {
         <div className="vstack gap-3">
           <div className="d-flex align-items-center gap-3">
             <img
-              src="/profileImages/handsome.jpg"
+              src="/profileImages/me.jpg"
               width="48"
               height="48"
               className="rounded-circle"
               style={{ objectFit: "cover" }}
             />
-            <span className="fw-semibold fs-5">Chayanin Suatap 650610560</span>
+            <span className="fw-semibold fs-5">Kanyawee Srithankaew 660610741</span>
           </div>
 
           <span>Quiz ง่ายจังเลยครับ ขอยาก ๆ กว่านี้ได้ไหม #261207</span>
