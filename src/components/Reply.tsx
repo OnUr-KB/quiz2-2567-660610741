@@ -1,33 +1,30 @@
 "use client";
-import {ReplyProps} from "@/libs/types"
-export default function Reply({ ImagePath, username, replyTitle, likes }: ReplyProps) {
-  return<div className="d-flex gap-2 my-2 ps-5">
-  <img
-    src="/profileImages/puppy.jpg"
-    width="48"
-    height="48"
-    className="rounded-circle"
-    style={{ objectFit: "cover" }}
-  />
-  <div
-    className="rounded rounded-3 p-2"
-    style={{ backgroundColor: "#E5E7EB" }} >
-    <span className="fw-semibold">หมาน้อย</span>
-    <br />
-    <span>จริงค้าบบบบบบบบ</span>
-    <div className="d-flex align-items-center gap-1">
-    </div>
-  </div>
-  <div
-    className="rounded rounded-3 p-2"
-    style={{ backgroundColor: "#E5E7EB" }} >
-    <span className="fw-semibold">Cat Meme</span>
-    <br />
-    <span>ลิซ่าาาาาา</span>
-    <div className="d-flex align-items-center gap-1">
-      <img src="/like.svg" width={20}></img>
-      <span className="text-muted">2 คน</span>
-    </div>
-  </div>
-</div>
+import { ReplyProps } from "@/libs/types";
+export default function Reply({ userImagePath, username, replyText, likeNum }:ReplyProps) {
+  return (
+    <div className="d-flex gap-2 my-2 ps-5">
+          <img
+            src={userImagePath}
+            width="48"
+            height="48"
+            className="rounded-circle"
+            style={{ objectFit: "cover" }}
+            alt="Profile picture"
+          />
+          <div
+            className="rounded rounded-3 p-2"
+            style={{ backgroundColor: "#3A3B3C" }}
+          >
+            <span className="fw-semibold" style={{ color: "#E4E6EB" }}>
+              {username}
+            </span>
+            <br />
+            <span style={{ color: "#E4E6EB" }}>{replyText}</span>
+            {likeNum && <div className="d-flex align-items-center gap-1">
+              <img src="/like.svg" width={20}></img>
+              <span style={{ color: "#B0B3B8" }}>{likeNum}คน</span>
+            </div>}
+          </div>
+        </div>
+  )
 }
